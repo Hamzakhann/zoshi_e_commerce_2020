@@ -4,19 +4,17 @@ import { Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import HomePage from "./Pages/homepage/homepage.component";
-
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE </h1>
-  </div>
-);
-
+import ShopPage from "./Pages/shop/shop.component.jsx";
+import SignInAndSignUpPage from "./Pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
+import Header from "./Components/header/header.component.jsx";
 function App() {
   return (
     <div>
+      <Header />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route path="/hats" component={HatsPage} />
+        <Route path="/shop" component={ShopPage} />
+        <Route path="/signin" component={SignInAndSignUpPage} />
       </Switch>
     </div>
   );
